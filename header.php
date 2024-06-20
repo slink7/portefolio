@@ -1,6 +1,7 @@
 <header>
 	<div class="container">
 		<h1>Mon Portfolio</h1>
+		<p> <?php echo $_SERVER["REQUEST_URI"] ?> </p>
 		<nav>
 			<ul>
 				<li><a href="index.php">Accueil</a></li>

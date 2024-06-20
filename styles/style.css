@@ -74,7 +74,16 @@ nav ul li a:hover {
     justify-content: center;
 }
 
-.project {
+.project_preview {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit; /* Conserver la couleur du texte par défaut */
+    border: 1px solid #ddd; /* Ajouter une bordure pour séparer les éléments */
+
+    overflow: hidden;
+
+
     background: #fff;
     padding: 1.5rem;
     flex: 1 1 calc(33.333% - 2rem);
@@ -84,25 +93,57 @@ nav ul li a:hover {
     text-align: left;
 }
 
-.project img {
+.project_preview img {
     max-width: 100%;
     border-radius: 10px;
     margin-bottom: 1rem;
 }
 
-.project h3 {
+.project_preview h3 {
     margin-top: 0;
     font-size: 1.5rem;
 }
 
-.project p {
+.project_preview p {
     font-size: 1rem;
     color: #666;
 }
 
-.project:hover {
+.project_preview:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project_image {
+    flex: 0 0 150px; /* Taille fixe pour le carré, ajustable selon vos besoins */
+    width: 150px; /* Assurez-vous que les dimensions sont les mêmes pour obtenir un carré */
+    height: 150px; /* Assurez-vous que les dimensions sont les mêmes pour obtenir un carré */
+    overflow: hidden; /* Cache toute partie de l'image qui déborde du conteneur */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project_image img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover; /* L'image couvre toute la zone en conservant son ratio */
+}
+
+.project_info {
+    flex: 2 1 auto;
+    padding: 1rem;
+}
+
+.project_info h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+.project_info p {
+    margin: 0;
+    color: #666;
+    font-size: 1rem;
 }
 
 footer {
